@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+.toppage {
+  height: 100%;
+  width: 1440px;
+  
+  .top {
+    &__album {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: auto;     
+      background-color: #fff;
+    }
+    &__album__title {
+      position: absolute;
+      color: white;
+      font-family :Quicksand, Courier New;
+      font-size: 77px;
+      top: 20%;
+      left: 10%;
+      p.subtitle {
+        font-size: 50px;
+      }
+      
+    }
+    &__album img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
