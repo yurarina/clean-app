@@ -1,34 +1,36 @@
 * {
   box-sizing: border-box;
+  font-family :Quicksand, Courier New;
 }
-.toppage {
-  height: 100%;
+.header {
+  height: 100px;
   width: 1440px;
-  
-  .top {
-    &__album {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      margin: auto;     
-      background-color: #fff;
-    }
-    &__album__title {
-      position: absolute;
-      color: white;
-      font-family :Quicksand, Courier New;
-      font-size: 77px;
-      top: 20%;
-      left: 10%;
-      p.subtitle {
-        font-size: 50px;
-      }
-      
-    }
-    &__album img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  background-color: rgb(237, 248, 248);
+}
+
+.top {
+  background-image: url("table.jpg");
+  height: 700px;
+  width: 1440px;
+  background-size: cover;
+  background-position: center;
+  &__title {
+    position: absolute;
+    color: white;
+    font-size: 77px;
+    top: 20%;
+    left: 10%;
+    p.subtitle {
+      font-size: 50px;
     }
   }
+
+  &__info {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    top: 50%;
+    right: 7%;
+  }
 }
+  
