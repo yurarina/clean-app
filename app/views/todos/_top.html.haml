@@ -1,13 +1,22 @@
-.header
-  .header__top
-    .header__top__login
-    .header__top__signup
+.top-page
+  .header
+    .header__top
+      - if user_signed_in?
+        = link_to "", class: "header__top__new" do
+          マイページ
+        = link_to "#", method: :delete, class: "header__top__new" do
+          ログアウト
+      - else
+        = link_to "#", class:"header__top__login" do
+          ログイン
+        = link_to "#", class:"header__top__new" do
+          新規登録
 
-.top
-  .top__title
-    %p.title おうちキレイ
-    %p.subtitle 5min-Habits
-  .top__info
-    %p.title-1 ふっと気がついたら
-    %p.title-1 毎日の簡単おそうじが習慣になっちゃった。
-    %p.title-1 <br>お出かけ前の歯みがきみたいに。
+  .top
+    .top__title
+      %p.title おうちキレイ
+      %p.subtitle 5min-Habits
+    .top__info
+      %p.title-1 ふっと気がついたら
+      %p.title-1 毎日の簡単おそうじが習慣になっちゃった。
+      %p.title-1 <br>お出かけ前の歯みがきみたいに。
