@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'todos#index'
-  resouces :users
+  resources :users
 end
