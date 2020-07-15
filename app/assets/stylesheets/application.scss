@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+  font-family :Quicksand, Courier New;
+}
 @import "reset";
 // @import "todos";
 @import "header";
+@import "main";
 @import "font-awesome-sprockets";
 @import "font-awesome";
