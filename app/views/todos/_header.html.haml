@@ -1,22 +1,22 @@
-
-.header
-  .header__left
-    .header__left__title
-      %p.title おうちキレイ
-      %p.subtitle 5min-Habits
-    .header__left__message
-      %p.title-1 ふっと気がついたら
-      %p.title-2 毎日の簡単おそうじが習慣になっちゃった
-      %p.title-3 お出かけ前の歯みがきみたいに。
-  
-  .header__right
-    - if user_signed_in?
-      = link_to "", class: "header__right__new" do
-        マイページ
-      = link_to "#", method: :delete, class: "header__right__new" do
-        ログアウト
-    - else
-      = link_to "#", class:"header__right__login" do
-        ログイン
-      = link_to "#", class:"header__right__new" do
-        新規登録
+.box
+  .header
+    .header__left
+      .header__left__title
+        %p.title おうちキレイ
+        %p.subtitle 5min-Habits
+      .header__left__message
+        %p.title-1 ふっと気がついたら
+        %p.title-2 毎日の簡単おそうじが習慣になっちゃった
+        %p.title-3 お出かけ前の歯みがきみたいに。
+    
+    .header__right
+      - if user_signed_in?
+        = link_to "", class: "header__right__new" do
+          マイページ
+        = link_to "#", method: :delete, class: "header__right__new" do
+          ログアウト
+      - else
+        = link_to "#", class:"header__right__login" do
+          ログイン
+        = link_to "#", class:"header__right__new" do
+          新規登録
