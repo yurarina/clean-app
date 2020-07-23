@@ -2,7 +2,7 @@
 .main { 
   height: 700px;
   width: 700px;
-  background-color: skyblue;
+  // background-color: skyblue;
   
   .main-title {
     display: flex;
@@ -30,7 +30,7 @@
     font-size: 15px;
     display: flex;
     justify-content: center;
-    &__list__1, &__list__2,&__list__3 {    
+    &__todo {    
       background: #23466d;
       width: 90px;
       height: 90px;
