@@ -1,0 +1,10 @@
+.box
+  .main
+    .main-title
+      .main-title__today 今日のお掃除
+      %span.main-title__date 7/14 Tues
+
+    .main-list
+      = @todos.each do |todo|
+        .main-list__todo
+          = todo.title
