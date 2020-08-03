@@ -1,4 +1,6 @@
 class TodosController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
+  
   def index
     @todos = Todo.all
   end
@@ -15,5 +17,9 @@ class TodosController < ApplicationController
   private
     def todo_params
       params.require(:todo).permit(:title)
+    end
+
+    def move_to_index
+      redirect_to action: :index unless user_signed_in?
     end
 end
