@@ -13,10 +13,10 @@
       - if user_signed_in?
         = link_to "", class: "header__right__new" do
           マイページ
-        = link_to "#", method: :delete, class: "header__right__new" do
+        = link_to "/users/sign_out", method: :delete, class: "header__right__new" do
           ログアウト
       - else
-        = link_to "user_registration_path", class:"header__right__login" do
+        = link_to "/users/sign_in", class:"header__right__login" do
           ログイン
-        = link_to "#", class:"header__right__new" do
+        = link_to "/users/sign_up", class:"header__right__new" do
           新規登録
