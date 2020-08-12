@@ -14,6 +14,14 @@ ActiveRecord::Schema.define(version: 20200716071446) do
 
   create_table "todos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
+    t.string   "kitchen"
+    t.string   "bathroom"
+    t.string   "entrance"
+    t.string   "room"
+    t.string   "outside"
+    t.string   "state",      null: false
+    t.date     "limit_date"
+    t.string   "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
