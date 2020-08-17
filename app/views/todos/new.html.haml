@@ -1,0 +1,33 @@
+.main-new
+  .content-new
+    = form_for @todo do |f|
+    
+      .box-new
+        .box-new__title
+          %label キッチン
+          %span.box-new__title__must 必須
+        = f.collection_select :kitchen, Kitchen.all, :od, :name, {prompt: '選択して下さい'}
+      
+      .box-new
+        .box-new__title
+          %label 水まわり
+          %span.box-new__title__must 必須
+        = f.collection_select :bathroom, Bathroom.all, :id, :name, {prompt: '選択して下さい'}
+        
+      .box-new
+        .box-new__title
+          %label 部屋
+          %span.box-new__title__must 必須
+        = f.collection_select :room, Room.all, :id, :name, {prompt: '選択して下さい'}
+        
+      .box-new
+        .box-new__title
+          %label 玄関
+          %span.box-new__title__must 必須
+        =f.collection_select  :entrance, Entrance.all, :id, :name, {prompt: '選択して下さい'}
+      
+      .box-new
+        .box-new__title
+          %label 外まわり
+          %span.box-new__title__must 必須
+        =f.collection_select  :outside, Outside.all, :id, :name, {prompt: '選択して下さい'}

@@ -3,6 +3,8 @@ class TodosController < ApplicationController
   
   def index
     @todos = Todo.all
+    # @todos = Todo.order('limit_date').all
+    # @status = ['todo', 'doing', 'done']  
   end
 
   def new
@@ -21,7 +23,10 @@ class TodosController < ApplicationController
 
   private
     def todo_params
-      params.require(:todo).permit(:title)
+      params.require(:todo).permit(:title, :kitchen, :bathroom, :room, :entrance, :outside).merge(user_id: current_user.id)
+  end
+
+  def set_tweet
     end
 
     def move_to_index
